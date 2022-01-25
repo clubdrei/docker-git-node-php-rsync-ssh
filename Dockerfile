@@ -4,5 +4,5 @@ RUN apt-get update \
     && add-apt-repository ppa:ondrej/php \
     && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash \
     && apt-get update \
-    && apt-get install openssh-client git nodejs php7.4 php7.4-curl php7.4-mbstring php7.4-xml rsync -y
+    && apt-get install openssh-client git nodejs php7.4 php7.4-curl php7.4-gd php7.4-mbstring php7.4-xml rsync -y
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
